@@ -1,0 +1,167 @@
+body {
+  font-size: 16px;
+  font-family: 'Merriweather', serif;
+}
+
+/* Merriweather Font Weights */
+.wt300 {
+  font-weight: 300;
+}
+
+.wt400 {
+  font-weight: 400;
+}
+
+.wt700 {
+  font-weight: 700;
+}
+
+.wt800 {
+  font-weight: 800;
+}
+
+.wt900 {
+  font-weight: 900;
+}
+
+p {
+  color: red;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+/* Colors */
+.prp-lt {
+  color: #A245A2;
+}
+
+.prp-dk {
+ color: #3B003B;
+}
+
+.bk {
+  color: black;
+}
+
+.wht {
+  color: white;
+}
+
+.photo-lg {
+  width: 60%;
+}
+
+.main-content {
+  border: 3px solid yellow;
+}
+
+/* header */
+header {
+  display: flex;
+  height: 4rem;
+  background-color: purple;
+  /* background-color: #87408A; */ /* lighter prp */
+  /* background-color: #7B2D7F; */ /* darker prp */
+  /* border: 1px solid cyan; */
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  /* border: 3px solid magenta; */
+}
+
+.brand-logo {
+  height: 2.75rem;
+  padding-top: 0.2rem;
+  padding-left: 1.5rem;
+  padding-right: 0.5rem;
+}
+
+.logotype {
+  font-size: 1.5rem;
+  color: #c9ae7b; /* beige */
+  /* color: #bcb9a6; */  /* grayish-beige */
+  /* border: 1px solid gray; */
+}
+
+/* Navigation for wide screens */
+
+.full {
+  display: flex;
+  align-items: center;
+  padding-right: 0.75rem;
+  /* border: 1px solid yellow; */
+}
+
+.full-nav {
+  display: inline-flex;
+}
+
+.full-nav li {
+  font-family: 'Merriweather Sans', sans-serif;
+  color: burlywood;
+  /* color: #EAD1B2; */
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.full-nav a {
+  text-decoration: none;
+}
+
+.full-nav a:hover {
+  color: white;
+}
+
+/* Navigation for small screens */
+
+.mobile {
+  display: none;
+  align-items: center;
+  padding-right: 0.75rem;
+  border: 1px solid orange;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.mobile-nav li {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .mobile {
+    display: flex;
+  }
+  .mobile-nav {
+    display: inline-flex;
+  }
+  .full-nav {
+    display: none;
+  }
+}
+
+.banner {
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid limegreen;
+}
+
+.button {
+  border: 1px solid cyan;
+}
+
+.information {
+  display: flex;
+  border: 1px solid cyan;
+}
+
+.info-main {
+  border: 1px solid magenta;
+}
