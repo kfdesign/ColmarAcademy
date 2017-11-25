@@ -18,20 +18,27 @@ h4 { font-size: 1.12rem; }
 h5 { font-size: 0.83rem; }
 h6 { font-size: 0.75rem; }
 
+i {
+  font-style: italic;
+}
+
 .uc {
   text-transform: uppercase;
 }
 
 /* Colors */
+.crn-slk { color: cornsilk; }
 .prp-lt { color: #A245A2; }
 .prp-dk { color: #3B003B; }
 .bk { color: black; }
 .wht { color: white; }
 
-.photo-lg {
-  display: block;
-  width: 100%;
-  height: 100%;
+.img-lg {
+  /* display: block; */
+  max-width: 100%;
+  max-height: 100%;
+  align-self: start;
+  /* height: 100%; */
   /* padding: 2rem 1.5rem; */
 }
 
@@ -42,13 +49,36 @@ h6 { font-size: 0.75rem; }
   border: 3px solid yellow;
 }
 
-/*
 .wrap {
   display: flex;
   justify-content: center;
   width: 100%;
+  background-color: white;
+  /* border: 3px solid green; */
 }
-*/
+
+.main_60 {
+  width: 60%;
+  display: flex;
+  box-sizing: border-box;
+  align-content: flex-start;
+  padding: 2rem 1.5rem;
+  /* justify-content: center; */
+  /* border: 1px solid magenta; */
+}
+
+.sub_40 {
+  width: 40%;
+  /* display: flex; */
+  box-sizing: border-box;
+  padding: 2rem 1.5rem 2rem 1rem;
+  border: 1px solid black;
+}
+
+.story_main {
+  box-sizing: border-box;
+  border: 1px solid magenta;
+}
 
 /* HEADER SECTION */
 header {
@@ -152,14 +182,10 @@ header {
 }
 
 /* BANNER SECTION */
-.banner-wrap {
-  display: flex;
-  justify-content: center;
-  background-color: cornsilk;
-  width: 100%;
-  /* border: 3px solid green; */
-}
 
+#banner-section.wrap {
+  background-color: cornsilk;
+}
 
 .banner {
   display: flex;
@@ -171,22 +197,25 @@ header {
   border: 1px solid limegreen;
 }
 
+/*
 .banner-main {
   width: 60%;
   display: flex;
   justify-content: center;
   border: 1px solid magenta;
 }
+*/
 
+/*
 .banner-info {
   display: inline-block;
   align-content: center;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   width: 40%;
-  /* padding-right: 4rem; */
   border: 1px solid magenta;
 }
+*/
 
 .button {
   background-color: purple;
@@ -199,11 +228,16 @@ header {
   cursor: pointer;
 }
 
+#banner-section .sub_40 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 #banner-section h1 {
   /* width: 40%; */
   font-size: 3rem;
   line-height: 1.1;
-  color: #666666;
+  color: #664352;
   padding-bottom: 2.25rem;
 }
 
@@ -217,38 +251,31 @@ header {
 
 /* INFORMATION SECTION */
 
+/*
 .information-wrap {
   display: flex;
   justify-content: center;
-  /* background-color: cornsilk; */
   width: 100%;
-  /* border: 3px solid green; */
 }
+*/
 
 .information {
   display: flex;
   width: 1600px;
-  border: 1px solid cyan;
+  /* border: 1px solid cyan; */
 }
 
-.info-main {
-  width: 60%;
-  display: flex;
+#information-section .main_60 {
   flex-wrap: wrap;
-  border: 1px solid magenta;
-}
-
-.info-photo-lg {
-  display: block;
-  width: 100%;
+  align-content: flex-start;
 }
 
 #information-section h2 {
   font-size: 2.25rem;
   line-height: 1.1;
-  color: #666666;
-  padding: 0 1.5rem 1.5rem 1.5rem;
-  border: 1pt solid blue;
+  color: #664352;
+  padding-bottom: 1.5rem;
+  /* border: 1pt solid blue; */
 }
 
 #information-section h4 {
@@ -267,8 +294,29 @@ header {
   font-weight: 300;
   line-height: 1.5;
   color: #666666;
-  padding: 0 1.5rem 1.5rem 1.5rem;
+  padding-bottom: 0.75rem;
+  /* padding: 0 1.5rem 1.5rem 1.5rem; */
   /* border: 1pt solid purple; */
+}
+
+#information-section .credit {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 0.9rem;
+    text-align: right;
+    color: #666666;
+    letter-spacing: 1;
+}
+
+#information-section .story_main {
+  padding-top: 2rem;
+}
+
+#information-section .sub_40 {
+  /* display: flex; */
+  align-content: space-between;
+  flex-wrap: wrap;
+  padding: 2rem 0rem 2rem 0rem;
+  border-left: 1pt solid burlywood;
 }
 
 #information-section p.article-detail {
@@ -298,27 +346,39 @@ header {
 .credit {
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 0.9rem;
+  text-align: right;
+  color: #666666;
   letter-spacing: 1;
 }
 
 /* INFORMATION ARTICLES */
 
-.info-sub {
-  width: 40%;
-  border: 1px solid teal;
+#information-section .info {
+  display: flex;
+  border-bottom: 1pt solid burlywood;
+  padding: 1rem 1.5rem 1rem 1rem;
+  /* border: 1pt solid magenta; */
+}
+
+#information-section .info:first-child {
+  padding-top: 0;
+}
+
+#information-section .info:last-child {
+  background-color: cornsilk;
+  border-bottom: none;
 }
 
 .img-full {
   display: block;
   width: 35%;
-  padding: 1rem;
+  /* padding: 1rem 0rem 1rem 1rem; */
+  align-self: flex-start;
 }
 
 .info-sub-txt {
   align-self: center;
-}
-
-#information-section .info {
-  display: flex;
-  align-items: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  /* border: 1pt solid orange; */
 }
