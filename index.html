@@ -2,61 +2,91 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="icon" href="resources/images/colmar_favicon2.ico" type="image/x-icon">
     <link href="resources/css/reset.css" rel="stylesheet" type="text/css">
     <link href="resources/css/style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900|Merriweather+Sans:300,400,700,800" rel="stylesheet">
-    <title>Colmar Academy</title>
+    <title>Colmar Academy Kevin F</title>
   </head>
   <body>
     <div class="main-content">
 
       <!-- HEADER -->
       <header>
-        <div class="brand">
-          <img class="brand-logo" src="resources/images/ic-logo_wht.svg">
-          <span class="logotype"><span class="wt700">Colmar</span> <span class="wt300">Academy</span></span>
+        <div class="nav-bar">
+          <div class="brand">
+            <img class="brand-logo" src="resources/images/ic-logo_wht.svg">
+            <span class="logotype"><span class="wt700">Colmar</span> <span class="wt300">Academy</span></span>
+          </div>
+          <nav class="full"> <!-- Navigation for wide screens -->
+            <ul class="full-nav">
+              <li><a>On Campus</li>
+              <li><a>Online</li>
+              <li><a>For Companies</li>
+              <li><a>Sign In</li>
+            </ul>
+          </nav>
+          <nav class="mobile"> <!-- Navigation for small screens -->
+            <ul class="mobile-nav">
+              <li><a><img src="resources/images/ic-on-campus.svg"></a></li>
+              <li><a><img src="resources/images/ic-online.svg"></a></li>
+              <li><a><img src="resources/images/ic-login.svg"></a></li>
+            </ul>
+          </nav>
         </div>
-        <nav class="full"> <!-- Navigation for wide screens -->
-          <ul class="full-nav">
-            <li><a>On Campus</li>
-            <li><a>Online</li>
-            <li><a>For Companies</li>
-            <li><a>Sign In</li>
-          </ul>
-        </nav>
-        <nav class="mobile"> <!-- Navigation for small screens -->
-          <ul class="mobile-nav">
-            <li><a><img src="resources/images/ic-on-campus.svg"></a></li>
-            <li><a><img src="resources/images/ic-online.svg"></a></li>
-            <li><a><img src="resources/images/ic-login.svg"></a></li>
-          </ul>
-        </nav>
       </header>
 
       <!-- BANNER SECTION -->
-      <section class="banner">
-        <img class="photo-lg" src="resources/images/banner.jpg">
-        <article class="banner-info">
-          <h1>Learn something new everyday</h1>
-          <h3>A mind, once stretched by a new idea, never regains its original dimensions.</h3>
-          <p class="button">Start Here</p>
-        </article>
-      </section>
+      <div class="banner-wrap" id="banner-section">
+        <section class="banner">
+          <article class="banner-main">
+            <img src="resources/images/banner.jpg" class="photo-lg">
+          </article>
+          <article class="banner-info">
+            <h1>Learn something new everyday</h1>
+            <h3>A mind, once stretched by a new idea, never regains its original dimensions.</h3>
+            <p class="button">Start Here</p>
+          </article>
+        </section>
+      </div>
 
       <!-- INFORMATION SECTION -->
-      <section class="information">
-        <article class="info-main">
-          <img src="#" class="#">
-          <h2>It doesn&#8217;t hurt to keep practicing</h2>
-          <p class="#">Do it again. Play it again. Sing it again. Read it again. Write it again. Sketch it again. Rehearse it again. Run it again. Try it again. Because again is practice, and practice is improvement, and improvement only leads to perfection.</p>
-          <p class="credit">― Richelle E. Goodrich, <i>Smile Anyway</i></P>
-        </article>
-        <article class="info-sub">
-
-          <p class="#"><a class="#"></a></p>
-
-        </article>
-      </section>
+      <div class="information-wrap" id="information-section">
+        <section class="information">
+          <article class="info-main">
+            <img src="resources/images/information-main.jpg" class="info-photo-lg">
+            <h2>It doesn&#8217;t hurt to keep practicing</h2>
+            <p>Do it again. Play it again. Sing it again. Read it again. Write it again. Sketch it again. Rehearse it again. Run it again. Try it again. Because again is practice, and practice is improvement, and improvement only leads to perfection.</p>
+            <p class="credit">― Richelle E. Goodrich, <i>Smile Anyway</i></P>
+          </article>
+          <section class="info-sub">
+            <article class="info">
+              <img src="resources/images/information-orientation.jpg" class="img-full">
+              <div class="info-sub-txt">
+                <h4>Orientation Date</h4>
+                <p class="article-detail">Tue 10/11 & Wed 10/12: 8am–3pm</p>
+                <p class="article-detail"><a class="article-link">Read more</a></p>
+              </div>
+            </article>
+            <article class="info">
+              <img src="resources/images/information-campus.jpg" class="img-full">
+              <div class="info-sub-txt">
+                <h4>Our Campus</h4>
+                <p class="article-detail">Find out which campus is close by you</p>
+                <p class="article-detail"><a>Read more</a></p>
+              </div>
+            </article>
+            <article class="info">
+              <img src="resources/images/information-guest-lecture.jpg" class="img-full">
+                <div class="info-sub-txt">
+                <h4>Our Guest Lecture</h4>
+                <p class="article-detail">Join a keynote with Oliver Sack about music in medical treatment</p>
+                <p class="article-detail"><a class="article-link">Read more</a></p>
+                </div>
+            </article>
+          </section>
+        </section>
+    </div>
       <footer>
       </footer>
     </div>
