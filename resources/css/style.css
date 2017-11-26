@@ -80,6 +80,11 @@ i {
   border: 1px solid magenta;
 }
 
+.icon {
+  height: 30px;
+  display: block;
+}
+
 /* HEADER SECTION */
 header {
   display: flex;
@@ -156,7 +161,7 @@ header {
   display: none;
   align-items: center;
   padding-right: 0.75rem;
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
 }
 
 .mobile-nav {
@@ -168,6 +173,7 @@ header {
   padding-right: 0.5rem;
 }
 
+
 @media only screen and (max-width: 700px) {
   /* Controls visibillity of full and mobile menus */
   .mobile {
@@ -176,7 +182,13 @@ header {
   .mobile-nav {
     display: inline-flex;
   }
+    .mobile-nav li:hover {
+    transition: all .2sec scale(1.1);
+  }
   .full-nav {
+    display: none;
+  }
+  .logotype {
     display: none;
   }
 }
@@ -195,6 +207,37 @@ header {
   /* margin: 2rem 1.5rem; */
   align-items: center;
   border: 1px solid limegreen;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .banner {
+    display: inline-block;
+    width: 100%;
+    /* background-color: cornsilk; */
+    /* padding: 2rem 1.5rem; */
+    /* margin: 2rem 1.5rem; */
+    align-content: center;
+    border: 1px solid limegreen;
+  }
+
+  #banner-section .main_60 {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    align-content: flex-start;
+    padding: 0rem 0rem;
+    /* transition: all 3s; */
+    /* justify-content: center; */
+    /* border: 1px solid magenta; */
+  }
+
+  #banner-section .sub_40 {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2rem 1rem;
+  }
+
 }
 
 /*
@@ -220,12 +263,18 @@ header {
 .button {
   background-color: purple;
   color: wheat;
-  padding: 0.5rem 1rem;
-  width: 25%;
+  padding: 1.25rem 1.5rem;
+  width: 33.3%;
   font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.2rem;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
+  min-width: 145px;
+}
+
+.button:hover {
+  color: orange;
 }
 
 #banner-section .sub_40 {
@@ -397,43 +446,46 @@ header {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 1rem 1rem 3rem 1rem; */
+    padding: 2rem 1rem 3rem 1rem; */
     /* border-left: 1pt solid burlywood; */
   }
 
-  .sub_40 {
+
+  #information-section .info:last-child {
+    background-color: white;
+  }
+
+  #information-section .sub_40 {
     width: 100%;
     /* display: flex; */
     /* box-sizing: border-box; */
-    /* padding: 2rem 1.5rem 2rem 1rem; */
-    padding: 0;
+    padding: 2rem 1.5rem 2rem 1rem;
+    /* padding: 0; */
     border: 1px solid teal;
   }
 
-  .img-full {
+  #information-section .img-full {
     display: none;
   }
 
-  .img-mobile {
+  #information-section .img-mobile {
     display: block;
   }
 
-  .info-sub-txt {
+  #information-section .info-sub-txt {
     align-self: center;
-    padding-top: 1rem;;
+    padding-top: 1rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    border: 1pt solid orange;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 
   }
 
 }
 
-
 .info-sub-txt {
   align-self: center;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  border: 1pt solid orange;
+  /* border: 1pt solid orange; */
 }
