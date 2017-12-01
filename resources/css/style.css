@@ -121,6 +121,7 @@ header {
 .logotype {
   font-size: 1.5rem;
   color: #c9ae7b; /* beige */
+  transition: all .5s ease-in-out;
   /* color: #bcb9a6; */  /* grayish-beige */
   /* border: 1px solid gray; */
 }
@@ -303,7 +304,7 @@ header {
 .information {
   display: flex;
   width: 1600px;
-  /* border: 1px solid cyan; */
+  border: 1px solid cyan;
 }
 
 #information-section .main_60 {
@@ -312,8 +313,10 @@ header {
 }
 
 #information-section h2 {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   line-height: 1.1;
+  font-weight: 400;
+  /* letter-spacing: -0.075rem; */
   color: #664352;
   padding-bottom: 1.5rem;
   /* border: 1pt solid blue; */
@@ -321,7 +324,7 @@ header {
 
 #information-section h4 {
   font-family: 'Merriweather Sans', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.4rem;
   line-height: 1.1;
   color: #666666;
@@ -360,7 +363,7 @@ header {
   border-left: 1pt solid burlywood;
 }
 
-#information-section p.article-detail {
+/* #information-section */ p.article-detail {
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 1.075rem;
   font-weight: 300;
@@ -478,9 +481,7 @@ header {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     margin-bottom: 2.5rem;
-
   }
-
 }
 
 .info-sub-txt {
@@ -488,4 +489,115 @@ header {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   /* border: 1pt solid orange; */
+}
+
+/* COURSES SECTION */
+
+#courses-section.wrap {
+  background-color: cornsilk;
+}
+
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 1600px;
+  border: 1px solid cyan;
+}
+
+.course-listing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 2pt solid orange;
+  box-sizing: border-box;
+  padding-left: 4.5rem;
+  padding-right: 4.5rem;
+}
+
+.course {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  box-sizing: border-box;
+  justify-content: space-between;
+  background-color: white;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-bottom: 1.5rem;
+  max-width: 30%;
+  border: 1px solid limegreen;
+}
+
+@media only screen and (max-width: 1120px) {
+  .course {
+    max-width: 45%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .course {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #courses-section .img-full, .article-detail {
+      display: none;
+    }
+  /*  #courses-section .info-sub-txt {
+      width: 100%;
+    } */
+  .course-listing {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .course {
+      width: 100%;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      background-color: cornsilk;
+    }
+  #courses-section .info-sub-txt h4 {
+      padding-top: 1.5rem;
+  }
+  #courses-section.wrap {
+      background-color: white;
+
+}
+
+#courses-section h2 {
+  font-size: 2.25rem;
+  text-align: center;
+  width: 100%;
+  color: #800080;
+  padding-top: 2rem;
+  border: 1pt solid blue;
+}
+
+#courses-section h4 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.1;
+  color: #666666;
+  padding-top: 1rem;
+  /* padding-bottom: 0.5rem; */
+  /* padding: 0 1.5rem 1.5rem 1.5rem; */
+  /* border: 1pt solid blue; */
+}
+
+#courses-section p.article-detail {
+  padding-top: 0.5rem;
+  /* border: 2pt solid green; */
+}
+
+#courses-section.img-full {
+  width: 100%;
+  height: auto;
+}
+
+.courses-title {
+  width: 100%;
 }
