@@ -186,14 +186,14 @@ header {
 
   .mobile {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-content: center;
   }
 
   .mobile-nav {
     display: inline-flex;
     flex-grow: 3;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
   }
   /* .mobile-nav li:hover {
