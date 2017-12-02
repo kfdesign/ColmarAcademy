@@ -46,7 +46,8 @@ i {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border: 3px solid yellow;
+  min-width: 480px;
+  /* border: 3px solid yellow; */
 }
 
 .wrap {
@@ -72,12 +73,12 @@ i {
   /* display: flex; */
   box-sizing: border-box;
   padding: 2rem 1.5rem 2rem 1rem;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .story_main {
   box-sizing: border-box;
-  border: 1px solid magenta;
+  /* border: 1px solid magenta; */
 }
 
 .icon {
@@ -161,6 +162,7 @@ header {
 .mobile {
   display: none;
   align-items: center;
+  flex-grow: 3;
   padding-right: 0.75rem;
   /* border: 1px solid orange; */
 }
@@ -177,21 +179,39 @@ header {
 
 @media only screen and (max-width: 700px) {
   /* Controls visibillity of full and mobile menus */
+
+  .brand {
+    flex-grow: 0;
+  }
+
   .mobile {
     display: flex;
+    justify-content: space-evenly;
+    align-content: center;
   }
+
   .mobile-nav {
     display: inline-flex;
+    flex-grow: 3;
+    justify-content: space-evenly;
+    align-items: center;
   }
-    .mobile-nav li:hover {
+  /* .mobile-nav li:hover {
     transition: all .2sec scale(1.1);
-  }
+  } */
+
   .full-nav {
     display: none;
   }
+
   .logotype {
     display: none;
   }
+
+  .icon:hover {
+    height: 35px;
+  }
+
 }
 
 /* BANNER SECTION */
@@ -207,7 +227,7 @@ header {
   /* padding: 2rem 1.5rem; */
   /* margin: 2rem 1.5rem; */
   align-items: center;
-  border: 1px solid limegreen;
+  /* border: 1px solid limegreen; */
 }
 
 @media only screen and (max-width: 1024px) {
@@ -219,7 +239,7 @@ header {
     /* padding: 2rem 1.5rem; */
     /* margin: 2rem 1.5rem; */
     align-content: center;
-    border: 1px solid limegreen;
+    /* border: 1px solid limegreen; */
   }
 
   #banner-section .main_60 {
@@ -304,7 +324,7 @@ header {
 .information {
   display: flex;
   width: 1600px;
-  border: 1px solid cyan;
+  /* border: 1px solid cyan; */
 }
 
 #information-section .main_60 {
@@ -317,7 +337,7 @@ header {
   line-height: 1.1;
   font-weight: 400;
   /* letter-spacing: -0.075rem; */
-  color: #664352;
+  color: #800080;
   padding-bottom: 1.5rem;
   /* border: 1pt solid blue; */
 }
@@ -374,7 +394,7 @@ header {
 }
 
 #information-section a {
-  font-size: 1rem;
+  font-size: 1.05rem;
   display: block;
   color: DarkMagenta;
   font-weight: 400;
@@ -477,9 +497,7 @@ header {
 
   #information-section .info-sub-txt {
     align-self: center;
-    padding-top: 1rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding: 1rem 1.5rem 0rem 1.5rem;
     margin-bottom: 2.5rem;
   }
 }
@@ -490,6 +508,7 @@ header {
   padding-right: 1.5rem;
   /* border: 1pt solid orange; */
 }
+
 
 /* COURSES SECTION */
 
@@ -502,17 +521,17 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   width: 1600px;
-  border: 1px solid cyan;
+  /* border: 1px solid cyan; */
 }
 
 .course-listing {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border: 2pt solid orange;
   box-sizing: border-box;
   padding-left: 4.5rem;
   padding-right: 4.5rem;
+  /* border: 2pt solid orange; */
 }
 
 .course {
@@ -521,13 +540,10 @@ header {
   box-sizing: border-box;
   justify-content: space-between;
   background-color: white;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin: 2rem 1rem;
   padding-bottom: 1.5rem;
   max-width: 30%;
-  border: 1px solid limegreen;
+  /* border: 1px solid limegreen; */
 }
 
 @media only screen and (max-width: 1120px) {
@@ -543,37 +559,53 @@ header {
 }
 
 @media only screen and (max-width: 700px) {
-  #courses-section .img-full, .article-detail {
+
+  #courses-section .img-full {
       display: none;
     }
-  /*  #courses-section .info-sub-txt {
-      width: 100%;
-    } */
+
+  #courses-section .article-detail {
+        display: none;
+      }
+
   .course-listing {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
   }
+
   .course {
       width: 100%;
       margin-top: 0.5rem;
       margin-bottom: 0.5rem;
       background-color: cornsilk;
     }
+
   #courses-section .info-sub-txt h4 {
       padding-top: 1.5rem;
   }
+
   #courses-section.wrap {
       background-color: white;
+  }
+
+  #courses-section .course-listing .course:first-child {
+      margin-top: 2rem;
+  }
+
+  #software.course:hover, #computer-art.course:hover, #design.course:hover, #data.course:hover, #business.course:hover, #marketing.course:hover {
+      background-color: orange;
+      cursor: pointer;
+  }
 
 }
 
 #courses-section h2 {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   text-align: center;
   width: 100%;
   color: #800080;
   padding-top: 2rem;
-  border: 1pt solid blue;
+  /* border: 1pt solid blue; */
 }
 
 #courses-section h4 {
@@ -588,12 +620,13 @@ header {
   /* border: 1pt solid blue; */
 }
 
+
 #courses-section p.article-detail {
   padding-top: 0.5rem;
   /* border: 2pt solid green; */
 }
 
-#courses-section.img-full {
+#courses-section .img-full {
   width: 100%;
   height: auto;
 }
