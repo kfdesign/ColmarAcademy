@@ -10,7 +10,7 @@ body {
 .wt800 { font-weight: 800; }
 .wt900 { font-weight: 900; }
 
-
+/* Standard tags that were not working */
 h1 { font-size: 2rem; }
 h2 { font-size: 1.5rem; }
 h3 { font-size: 1.17rem; }
@@ -18,36 +18,15 @@ h4 { font-size: 1.12rem; }
 h5 { font-size: 0.83rem; }
 h6 { font-size: 0.75rem; }
 
-i {
-  font-style: italic;
-}
+i { font-style: italic; }
 
-.uc {
-  text-transform: uppercase;
-}
 
-/* Colors */
-.crn-slk { color: cornsilk; }
-.prp-lt { color: #A245A2; }
-.prp-dk { color: #3B003B; }
-.bk { color: black; }
-.wht { color: white; }
-
-.img-lg {
-  /* display: block; */
-  max-width: 100%;
-  max-height: 100%;
-  align-self: start;
-  /* height: 100%; */
-  /* padding: 2rem 1.5rem; */
-}
-
+/* Overall CSS */
 .main-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   min-width: 480px;
-  /* border: 3px solid yellow; */
 }
 
 .wrap {
@@ -55,7 +34,6 @@ i {
   justify-content: center;
   width: 100%;
   background-color: white;
-  /* border: 3px solid green; */
 }
 
 .main_60 {
@@ -64,52 +42,53 @@ i {
   box-sizing: border-box;
   align-content: flex-start;
   padding: 2rem 1.5rem;
-  /* justify-content: center; */
-  /* border: 1px solid magenta; */
 }
 
 .sub_40 {
   width: 40%;
-  /* display: flex; */
   box-sizing: border-box;
   padding: 2rem 1.5rem 2rem 1rem;
-  /* border: 1px solid black; */
 }
 
 .story_main {
   box-sizing: border-box;
-  /* border: 1px solid magenta; */
+}
+
+.img-lg {
+  max-width: 100%;
+  max-height: 100%;
+  align-self: start;
+}
+
+.uc {
+  text-transform: uppercase;
 }
 
 .icon {
   height: 30px;
   display: block;
+  transition: height 0.2s;
 }
 
-/* HEADER SECTION */
+
+/* //////// HEADER SECTION //////// */
 header {
   display: flex;
   justify-content: center;
   width: 100%;
   height: 4rem;
   background-color: #800080;
-  /* background-color: #87408A; */ /* lighter prp */
-  /* background-color: #7B2D7F; */ /* darker prp */
-  /* border: 1px solid cyan; */
 }
 
 .nav-bar {
   width: 1600px;
   display: flex;
-  /* justify-content: center; */
-  /* border: 1px solid cyan; */
 }
 
 .brand {
   display: flex;
   align-items: center;
   flex-grow: 2;
-  /* border: 3px solid magenta; */
 }
 
 .brand-logo {
@@ -121,19 +100,15 @@ header {
 
 .logotype {
   font-size: 1.5rem;
-  color: #c9ae7b; /* beige */
+  color: #c9ae7b;
   transition: all .5s ease-in-out;
-  /* color: #bcb9a6; */  /* grayish-beige */
-  /* border: 1px solid gray; */
 }
 
 /* Navigation for wide screens */
-
 .full {
   display: flex;
   align-items: center;
   padding-right: 0.75rem;
-  /* border: 1px solid yellow; */
 }
 
 .full-nav {
@@ -143,7 +118,6 @@ header {
 .full-nav li {
   font-family: 'Merriweather Sans', sans-serif;
   color: burlywood;
-  /* color: #EAD1B2; */
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
@@ -158,13 +132,11 @@ header {
 }
 
 /* Navigation for small screens */
-
 .mobile {
   display: none;
   align-items: center;
   flex-grow: 3;
   padding-right: 0.75rem;
-  /* border: 1px solid orange; */
 }
 
 .mobile-nav {
@@ -179,42 +151,32 @@ header {
 
 @media only screen and (max-width: 700px) {
   /* Controls visibillity of full and mobile menus */
-
   .brand {
     flex-grow: 0;
   }
-
   .mobile {
     display: flex;
     justify-content: space-around;
     align-content: center;
   }
-
   .mobile-nav {
     display: inline-flex;
     flex-grow: 3;
     justify-content: space-around;
     align-items: center;
   }
-  /* .mobile-nav li:hover {
-    transition: all .2sec scale(1.1);
-  } */
-
   .full-nav {
     display: none;
   }
-
   .logotype {
     display: none;
   }
-
   .icon:hover {
     height: 35px;
   }
-
 }
 
-/* BANNER SECTION */
+/* //////// BANNER SECTION //////// */
 
 #banner-section.wrap {
   background-color: cornsilk;
@@ -224,62 +186,28 @@ header {
   display: flex;
   width: 1600px;
   background-color: cornsilk;
-  /* padding: 2rem 1.5rem; */
-  /* margin: 2rem 1.5rem; */
   align-items: center;
-  /* border: 1px solid limegreen; */
 }
 
 @media only screen and (max-width: 1024px) {
-
   .banner {
     display: inline-block;
     width: 100%;
-    /* background-color: cornsilk; */
-    /* padding: 2rem 1.5rem; */
-    /* margin: 2rem 1.5rem; */
     align-content: center;
-    /* border: 1px solid limegreen; */
   }
-
   #banner-section .main_60 {
     width: 100%;
     display: flex;
     box-sizing: border-box;
     align-content: flex-start;
     padding: 0rem 0rem;
-    /* transition: all 3s; */
-    /* justify-content: center; */
-    /* border: 1px solid magenta; */
   }
-
   #banner-section .sub_40 {
     width: 100%;
     box-sizing: border-box;
     padding: 2rem 1rem;
   }
-
 }
-
-/*
-.banner-main {
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  border: 1px solid magenta;
-}
-*/
-
-/*
-.banner-info {
-  display: inline-block;
-  align-content: center;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  width: 40%;
-  border: 1px solid magenta;
-}
-*/
 
 .button {
   background-color: purple;
@@ -319,12 +247,12 @@ header {
   padding-bottom: 3rem;
 }
 
-/* INFORMATION SECTION */
+
+/* //////// INFORMATION SECTION //////// */
 
 .information {
   display: flex;
   width: 1600px;
-  /* border: 1px solid cyan; */
 }
 
 #information-section .main_60 {
@@ -336,10 +264,8 @@ header {
   font-size: 2.5rem;
   line-height: 1.1;
   font-weight: 400;
-  /* letter-spacing: -0.075rem; */
   color: #800080;
   padding-bottom: 1.5rem;
-  /* border: 1pt solid blue; */
 }
 
 #information-section h4 {
@@ -349,8 +275,6 @@ header {
   line-height: 1.1;
   color: #666666;
   padding-bottom: 0.5rem;
-  /* padding: 0 1.5rem 1.5rem 1.5rem; */
-  /* border: 1pt solid blue; */
 }
 
 #information-section p {
@@ -359,8 +283,6 @@ header {
   line-height: 1.5;
   color: #666666;
   padding-bottom: 0.75rem;
-  /* padding: 0 1.5rem 1.5rem 1.5rem; */
-  /* border: 1pt solid purple; */
 }
 
 #information-section .credit {
@@ -376,21 +298,19 @@ header {
 }
 
 #information-section .sub_40 {
-  /* display: flex; */
   align-content: space-between;
   flex-wrap: wrap;
   padding: 2rem 0rem 2rem 0rem;
   border-left: 1pt solid burlywood;
 }
 
-/* #information-section */ p.article-detail {
+p.article-detail {
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 1.075rem;
   font-weight: 300;
   line-height: 1.5;
   color: #666666;
   padding: 0;
-  /* border: 2pt solid green; */
 }
 
 #information-section a {
@@ -400,7 +320,6 @@ header {
   font-weight: 400;
   cursor: pointer;
   margin-top: 0.75rem;
-  /* border: 1pt solid green; */
 }
 
 #information-section a:hover {
@@ -428,7 +347,6 @@ header {
   display: flex;
   border-bottom: 1pt solid burlywood;
   padding: 1rem 1.5rem 1rem 1rem;
-  /* border: 1pt solid magenta; */
 }
 
 #information-section .info:first-child {
@@ -443,17 +361,20 @@ header {
 .img-full {
   display: block;
   width: 35%;
-  /* padding: 1rem 0rem 1rem 1rem; */
   align-self: flex-start;
 }
 
 .img-mobile {
   display: none;
   width: 100%;
-  /* padding: 1rem 0rem 1rem 1rem; */
   align-self: flex-start;
 }
 
+.info-sub-txt {
+  align-self: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 
 @media only screen and (max-width: 700px) {
   /* Controls visibillity of full and mobile menus */
@@ -461,40 +382,26 @@ header {
     display: inline-block;
     border-bottom: none;
     padding: 0;
-    /* padding: 1rem 1.5rem 1rem 1rem; */
-    /* border: 1pt solid magenta; */
   }
-
   #information-section .sub_40 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 2rem 1rem 3rem 1rem; */
-    /* border-left: 1pt solid burlywood; */
   }
-
-
   #information-section .info:last-child {
     background-color: white;
   }
-
   #information-section .sub_40 {
     width: 100%;
-    /* display: flex; */
-    /* box-sizing: border-box; */
     padding: 2rem 1.5rem 2rem 1rem;
-    /* padding: 0; */
-    border: 1px solid teal;
   }
-
   #information-section .img-full {
     display: none;
   }
-
   #information-section .img-mobile {
     display: block;
   }
-
   #information-section .info-sub-txt {
     align-self: center;
     padding: 1rem 1.5rem 0rem 1.5rem;
@@ -502,15 +409,8 @@ header {
   }
 }
 
-.info-sub-txt {
-  align-self: center;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  /* border: 1pt solid orange; */
-}
 
-
-/* COURSES SECTION */
+/* //////// COURSES SECTION //////// */
 
 #courses-section.wrap {
   background-color: cornsilk;
@@ -521,7 +421,6 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   width: 1600px;
-  /* border: 1px solid cyan; */
 }
 
 .course-listing {
@@ -531,19 +430,15 @@ header {
   box-sizing: border-box;
   padding-left: 4.5rem;
   padding-right: 4.5rem;
-  /* border: 2pt solid orange; */
 }
 
 .course {
-  /* display: flex; */
-  /* flex-wrap: wrap; */
   box-sizing: border-box;
   justify-content: space-between;
   background-color: white;
   margin: 2rem 1rem;
   padding-bottom: 1.5rem;
   max-width: 30%;
-  /* border: 1px solid limegreen; */
 }
 
 @media only screen and (max-width: 1120px) {
@@ -559,49 +454,35 @@ header {
 }
 
 @media only screen and (max-width: 700px) {
-
   #courses-section .img-full {
-      display: none;
-    }
-
+    display: none;
+  }
   #courses-section .article-detail {
-        display: none;
-      }
-
+    display: none;
+  }
   .course-listing {
     padding-left: 0.25rem;
     padding-right: 0.25rem;
   }
-
   .course {
-      width: 100%;
-      box-sizing: border-box;
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
-      background-color: white;
-      border-right: 1pt solid bisque;
-      border-bottom: 1pt solid bisque;
-    }
-
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: white;
+    border-right: 1pt solid bisque;
+    border-bottom: 1pt solid bisque;
+  }
   #courses-section .info-sub-txt h4 {
-      padding-top: 1.5rem;
+    padding-top: 1.5rem;
   }
-
-  /*
-  #courses-section.wrap {
-      background-color: white;
-  }
-*/
-
   #courses-section .course-listing .course:first-child {
-      margin-top: 2rem;
+    margin-top: 2rem;
   }
-
   #software.course:hover, #computer-art.course:hover, #design.course:hover, #data.course:hover, #business.course:hover, #marketing.course:hover {
       background-color: orange;
       cursor: pointer;
   }
-
 }
 
 #courses-section h2 {
@@ -610,7 +491,6 @@ header {
   width: 100%;
   color: #800080;
   padding-top: 2rem;
-  /* border: 1pt solid blue; */
 }
 
 #courses-section h4 {
@@ -620,15 +500,10 @@ header {
   line-height: 1.1;
   color: #666666;
   padding-top: 1rem;
-  /* padding-bottom: 0.5rem; */
-  /* padding: 0 1.5rem 1.5rem 1.5rem; */
-  /* border: 1pt solid blue; */
 }
-
 
 #courses-section p.article-detail {
   padding-top: 0.5rem;
-  /* border: 2pt solid green; */
 }
 
 #courses-section .img-full {
@@ -638,4 +513,121 @@ header {
 
 .courses-title {
   width: 100%;
+}
+
+
+/* //////// THESIS SECTION //////// */
+
+.thesis {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1600px;
+}
+
+.thesis-title {
+  width: 100%;
+}
+
+#thesis-section .main_60 {
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+#thesis-section .sub_40 {
+  align-content: space-between;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  padding: 2rem 0rem 2rem 0rem;
+}
+
+#thesis-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  width: 100%;
+  color: #800080;
+  padding-top: 2rem;
+}
+
+#thesis-section h3 {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.1;
+  color: #800080;
+  padding-bottom: 0.5rem;
+}
+
+#thesis-section h4 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.1;
+  color: #666666;
+  padding-bottom: 0.5rem;
+}
+
+#thesis-section p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #666666;
+  padding-bottom: 0.75rem;
+}
+
+#thesis-section .story_main {
+  padding-top: 2rem;
+}
+
+#thesis-section .info {
+  display: flex;
+  padding: 1rem 1.5rem 1rem 1rem;
+}
+
+#thesis-section .info:first-child {
+  background-color: cornsilk;
+}
+
+.vid {
+  max-width: 100%;
+  max-height: 100%;
+  align-self: start;
+}
+
+@media only screen and (max-width: 700px) {
+  #thesis-section .sub_40 {
+    display: none;
+  }
+  #thesis-section .main_60 {
+    width: 100%;
+    padding: 2rem 0rem;
+  }
+  #thesis-section .story_main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* //////// FOOTER //////// */
+.rights {
+  width: 1600px;
+  display: inline-flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  border-top: 1px solid #664352;
+}
+
+footer p {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 300;
+  color: #666666;
+  margin-top: 1rem;
+}
+
+.left {
+  text-align: left;
+  padding-left: 1.5rem;
+}
+
+.right {
+  text-align: right;
+  padding-right: 1.5rem;
 }
