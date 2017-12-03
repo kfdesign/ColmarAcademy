@@ -438,18 +438,23 @@ p.article-detail {
   background-color: white;
   margin: 2rem 1rem;
   padding-bottom: 1.5rem;
-  max-width: 30%;
+  /* max-width: 30%; */
+  /* need this flex-basis in order to have it display properly in Safari */
+  flex-basis: 30%;
 }
 
 @media only screen and (max-width: 1120px) {
   .course {
-    max-width: 45%;
+    /* max-width: 45%; */
+    flex-basis: 45%;
+
   }
 }
 
 @media only screen and (max-width: 800px) {
   .course {
-    max-width: 90%;
+    /* max-width: 90%; */
+    flex-basis: 90%;
   }
 }
 
